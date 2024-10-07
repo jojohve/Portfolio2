@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Joseph La Luna | Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -16,9 +17,9 @@
         <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
 
         <ul class="menu">
-            <li><a href="#page1">COME CONTATTARMI</a></li>
-            <li><a href="#page2">CURRICULUM VITAE</a></li>
-            <li><a href="#page3">PAGINA 3</a></li>
+            <li><a href="/html/contact.html">COME CONTATTARMI</a></li>
+            <li><a href="/html/cv.html">CURRICULUM VITAE</a></li>
+            <li><a href="/html/page3.html">PAGINA 3</a></li>
         </ul>
     </header>
 
@@ -26,45 +27,52 @@
         <div class="nav">
             <nav class="initial-nav">
                 <ul>
-                    <li><a href="#top">HTML & CSS</a></li>
-                    <li><a href="#middle-1">Javascript & Typescript</a></li>
-                    <li><a href="#middle-2">Php & mySql</a></li>
-                    <li><a href="#middle-3">Wordpress & Jekyll</a></li>
-                    <li><a href="#middle-4">Java</a></li>
-                    <li><a href="#bottom">Node.js</a></li>
+                    <li><a href="#HTML" class="glow-on-hover">HTML & CSS</a></li>
+                    <li><a href="#Javascript" class="glow-on-hover">Javascript & Typescript</a></li>
+                    <li><a href="#Php" class="glow-on-hover">Php & mySql</a></li>
+                    <li><a href="#Wordpress" class="glow-on-hover">Wordpress & Jekyll</a></li>
+                    <li><a href="#Java" class="glow-on-hover">Java</a></li>
+                    <li><a href="#Node.js" class="glow-on-hover">Node.js</a></li>
                 </ul>
             </nav>
         </div>
 
         <section id="main">
 
-            <article class="panel" id="top">
+            <article class="panel" id="HTML">
                 <h1>HTML & CSS</h1>
             </article>
 
-            <article class="panel" id="middle-1">
+            <article class="panel" id="Javascript">
                 <h1>Javascript & Typescript</h1>
             </article>
 
-            <article class="panel" id="middle-2">
+            <article class="panel" id="Php">
                 <h1>Php & mySql</h1>
             </article>
 
-            <article class="panel" id="middle-3">
+            <article class="panel" id="Wordpress">
                 <h1>Wordpress & Jekyll</h1>
             </article>
 
-            <article class="panel" id="middle-4">
+            <article class="panel" id="Java">
                 <h1>Java</h1>
             </article>
 
-            <article class="panel" id="bottom">
+            <article class="panel" id="Node.js">
                 <h1>Node.js</h1>
             </article>
 
         </section>
     </div>
-    
+    <script>
+        document.querySelectorAll('.glow-on-hover').forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelectorAll('.glow-on-hover').forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+            });
+        });
+    </script>
 </body>
 
 </html>
