@@ -2,25 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 
-@font-face {
-  font-family: 'KGRedHands';
-  src: url('/assets/KGRedHands.ttf');
-}
-
-@font-face {
-  font-family: 'KGRedHandsO';
-  src: url('/assets/KGRedHandsOutline.ttf');
-}
-
-@font-face {
-  font-family: 'Capture';
-  src: url('/assets/Capture\ it.ttf');
-}
-
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #bbb;
+  background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
 }
 
 a {
@@ -70,9 +55,6 @@ a {
   font-size: 2em;
   padding: 10px 20px;
   text-decoration: none;
-  font-family: 'Capture';
-  color: #00000098;
-  font-size: xx-large;
 }
 
 .header .menu {
@@ -177,7 +159,6 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: white;
   position: fixed;
   left: 0;
   top: 0;
@@ -192,8 +173,6 @@ a {
   justify-content: center;
   align-items: center;
   width: 100%;
-  font-family: 'KGRedHands';
-  font-size: 78%;
 }
 
 .initial-nav ul {
@@ -205,36 +184,6 @@ a {
   position: absolute;
 }
 
-.initial-nav ul li:nth-child(3n+1),
-#main .panel:nth-child(3n+1) {
-  background: rgb(32, 32, 255);
-}
-
-.initial-nav ul li:nth-child(3n+2),
-#main .panel:nth-child(3n+2) {
-  background: deepskyblue;
-}
-
-.initial-nav ul li:nth-child(3n+3),
-#main .panel:nth-child(3n+3) {
-  background: hotpink;
-}
-
-.initial-nav ul li:nth-child(3n+4),
-#main .panel:nth-child(3n+4) {
-  background: lightgreen;
-}
-
-.initial-nav ul li:nth-child(3n+5),
-#main .panel:nth-child(3n+5) {
-  background: orange;
-}
-
-.initial-nav ul li:nth-child(3n+6),
-#main .panel:nth-child(3n+6) {
-  background: orangered;
-}
-
 .initial-nav ul li {
   display: flex;
   margin: 0 14px;
@@ -243,7 +192,7 @@ a {
 
 .initial-nav ul a {
   padding: 0 15px;
-  color: white;
+  color: rgb(0, 0, 0);
   letter-spacing: 2px;
   text-decoration: none;
   line-height: 30px;
@@ -265,81 +214,46 @@ a {
   text-align: center;
   justify-content: center;
   margin: 0;
-  font-family: 'KGRedHandsO';
 }
 
 #main article.panel {
   transition: transform 0.6s ease-in;
 }
 
-.glow-on-hover {
-  width: 210px;
-  height: 50px;
-  cursor: pointer;
-  position: relative;
-  z-index: 0;
-  border-radius: 10px;
-  text-align: center;
-  align-content: center;
+.article-wrapper {
+  padding: 25px;
+  display: flex;
+  flex-direction: row;
 }
 
-.glow-on-hover:before {
-  content: '';
-  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  background-size: 400%;
-  z-index: -1;
-  filter: blur(5px);
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  animation: glowing 25s linear infinite;
-  opacity: 0;
-  transition: opacity .3s ease-in-out;
-  border-radius: 10px;
+.card {
+  width: 335px;
+  padding: 25px;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  background-color: #ffffffda;
+  margin: 20px;
 }
 
-.glow-on-hover.active:before {
-  opacity: 1;
-  /* Mantieni l'effetto quando il pulsante ha la classe 'active' */
-  animation: glowing 50s linear infinite;
+.card h2 {
+  color: #24448f;
+  font-size: 38px;
+  margin-bottom: 10px;
+  cursor: default;
 }
 
-.glow-on-hover:active {
-  color: #00000098;
-  text-transform: capitalize;
+.card a {
+  text-decoration: none;
+  color: #e01f1f;
+  font-size: 17px;
 }
 
-.glow-on-hover:active:after {
-  background: transparent;
-}
-
-.glow-on-hover:hover:before {
-  opacity: 1;
-}
-
-.glow-on-hover:after {
-  z-index: -1;
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  border-radius: 10px;
-}
-
-@keyframes glowing {
-  0% {
-    background-position: 0 0;
+@media screen and (max-width: 768px) {
+  .article-wrapper{
+    flex-direction: column;
   }
 
-  50% {
-    background-position: 400% 0;
-  }
-
-  100% {
-    background-position: 0 0;
+  .card {
+    width: calc(100% - 40px);
   }
 }
