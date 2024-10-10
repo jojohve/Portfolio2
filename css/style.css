@@ -133,14 +133,6 @@ main {
   margin-right: 0;
 }
 
-@keyframes scroll-left {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
 .card-wrapper {
   display: flex;
   padding: 20px;
@@ -182,6 +174,14 @@ main {
   .menu-icon {
     display: block;
     cursor: pointer;
+  }
+}
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }
 .panel {
