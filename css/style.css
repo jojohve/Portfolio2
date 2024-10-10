@@ -153,7 +153,6 @@ main {
   }
   .skills-nav {
     display: block;
-    overflow-x: scroll;
   }
   .skills-nav ul {
     animation: scroll-left 15s linear infinite;
@@ -162,6 +161,7 @@ main {
     width: 100%;
     text-align: center;
     margin: 10px 0;
+    margin-right: 20px;
   }
   .card-wrapper {
     flex-direction: column;
