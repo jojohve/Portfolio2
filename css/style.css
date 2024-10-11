@@ -9,6 +9,10 @@ body {
   background: linear-gradient(120deg, #d2c3fc 0%, #8ec5fc 100%);
 }
 
+@font-face {
+  font-family: myfont;
+  src: url(/assets/helvetica-light-587ebe5a59211.ttf);
+}
 a {
   color: #333;
   text-decoration: none;
@@ -23,6 +27,9 @@ a {
   z-index: 1000;
   height: 100px;
   transition: background-color 0.5s ease, box-shadow 0.5s ease;
+  background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+  font-family: myfont;
+  font-size: 20px;
 }
 
 .header ul {
@@ -30,7 +37,6 @@ a {
   padding: 0;
   list-style: none;
   overflow: hidden;
-  background-color: #fff;
 }
 
 .header ul a {
@@ -48,6 +54,7 @@ a {
   float: left;
   font-size: 2em;
   padding: 10px 20px;
+  font-weight: bold;
 }
 
 .header .menu {
@@ -172,12 +179,12 @@ main {
 
 .skills-nav::before {
   left: 0;
-  background: linear-gradient(to right, rgb(245, 245, 245), rgba(245, 245, 245, 0));
+  background: linear-gradient(to right, rgba(245, 245, 245, 0.5), rgba(245, 245, 245, 0));
 }
 
 .skills-nav::after {
   right: 0;
-  background: linear-gradient(to left, rgb(245, 245, 245), rgba(245, 245, 245, 0));
+  background: linear-gradient(to left, rgba(245, 245, 245, 0.5), rgba(245, 245, 245, 0));
 }
 
 .skills-nav ul {
@@ -374,6 +381,10 @@ main {
   }
 }
 @media (max-width: 768px) {
+  .header ul {
+    background-color: white;
+    box-shadow: 0px 15px 10px -15px #111;
+  }
   .header ul a {
     border-bottom: 1px solid #bbb;
   }
