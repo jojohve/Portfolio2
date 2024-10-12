@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joseph La Luna | Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <style>
+        @keyframes fadeIn {
+            from {
+                top: 20%;
+                opacity: 0;
+            }
+            to {
+                top: 100;
+                opacity: 1;
+            }
+        }
+
+        @-webkit-keyframes fadeIn {
+            from {
+                top: 20%;
+                opacity: 0;
+            }
+            to {
+                top: 100;
+                opacity: 1;
+            }
+        }
+
+        .wrapper {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            animation: fadeIn 1000ms ease;
+            -webkit-animation: fadeIn 1500ms ease;
+        }
+
+        h1 {
+            font-size: 50px;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 0;
+            line-height: 1;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="/index.html" class="logo">PORTFOLIO</a>
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+
+        <ul class="menu">
+            <li><a href="contact.html">Contattami</a></li>
+            <li><a href="cv.html">Curriculum Vitae</a></li>
+            <li><a href="cm.html">Coming soon...</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <div class="wrapper">
+            <h1>coming soon<span>.</span></h1>
+           </div>
+    </main>
+</body>
+
+</html>
