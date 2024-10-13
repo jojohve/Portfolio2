@@ -6,6 +6,7 @@ Visualizzare il Sito
 
 Puoi visualizzare il portfolio online visitando il seguente link:
 [Portfolio di Joseph](https://portfolio-la-luna-joseph.netlify.app/)
+
 Struttura del Progetto
 
     index.html: Pagina principale del portfolio.
