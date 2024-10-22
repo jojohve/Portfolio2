@@ -437,12 +437,12 @@ h4 {
 .preview iframe {
   position: absolute;
   top: 50%;
-  left: 50%; 
+  left: 50%;
   width: 200%;
   height: 200%;
   transform: translate(-50%, -50%) scale(0.5);
   border: none;
-  pointer-events: none; 
+  pointer-events: none;
 }
 
 .pdf-container {
@@ -534,6 +534,8 @@ h4 {
     width: 100%;
     max-width: 400px;
     margin: 10px 0;
+    text-align: center;
+    justify-content: center;
   }
 
   .menu {
@@ -633,5 +635,9 @@ h4 {
   .skills-nav ul {
     animation: scroll-left-mobile 10s linear infinite;
     margin-top: 10px;
+  }
+
+  .preview iframe {
+    height: 150px;
   }
 }
