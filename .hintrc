@@ -35,6 +35,7 @@
         "frame-title": "off"
       }
     ],
-    "css-prefix-order": "off"
+    "css-prefix-order": "off",
+    "no-inline-styles": "off"
   }
 }
