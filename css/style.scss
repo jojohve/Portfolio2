@@ -151,7 +151,7 @@ a {
 }
 
 .menu a:hover {
-  background-color: #ddd;
+  background-color: #ddddddbb;
 }
 
 .menu-btn {
@@ -493,7 +493,7 @@ h4 {
 
 @media (max-width: 768px) {
   .header ul {
-    background-color: white;
+    background-color: rgba(255, 255, 255);
     box-shadow: 0px 15px 10px -15px #111;
   }
 
@@ -553,6 +553,11 @@ h4 {
 
   main {
     background: url(/assets/images/PngItem_296433.png);
+  }
+
+  p {
+    text-align: center;
+    margin: 0 auto;
   }
 }
 
