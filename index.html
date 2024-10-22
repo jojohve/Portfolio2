@@ -7,6 +7,29 @@
     <title>Joseph La Luna | Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <script>
+        // Funzione per aprire una finestra popup centrata e del 50% più grande
+        function openPopup(url) {
+            // Ottieni le dimensioni della finestra del browser
+            const screenWidth = window.innerWidth;
+            const screenHeight = window.innerHeight;
+
+            // Calcola il 50% delle dimensioni della finestra
+            const popupWidth = Math.floor(screenWidth * 0.75);
+            const popupHeight = Math.floor(screenHeight * 0.75);
+
+            // Calcola la posizione per centrare la finestra
+            const left = Math.floor((screenWidth - popupWidth) / 2);
+            const top = Math.floor((screenHeight - popupHeight) / 2);
+
+            // Apre la finestra pop-up centrata
+            window.open(
+                url,
+                'popupWindow',
+                `width=${popupWidth},height=${popupHeight},left=${left},top=${top},scrollbars=yes`
+            );
+        }
+    </script>
 </head>
 
 <body>
@@ -44,7 +67,7 @@
                 <div class="card-wrapper">
                     <div class="card">
                         <h2>Sito web Nutrizionista</h2>
-                        <a href="https://nutrizionista-lagatta.netlify.app/">nutrizionista-lagatta.netlify.app</a>
+                        <a href ="https://nutrizionista-lagatta.netlify.app/" target="_blank" rel="noopener noreferrer" class="link">nutrizionista-lagatta.netlify.app</a>
                     </div>
                 </div>
             </section>
@@ -54,16 +77,24 @@
                 <div class="card-wrapper">
                     <div class="card">
                         <h2>Progetto JavaScript 1</h2>
-                        <a href="https://jojohve.github.io/Counter-Js/">Counter JS</a>
+                        <a href="https://jojohve.github.io/Counter-Js/" target="_blank" rel="noopener noreferrer" class="link">Counter JS</a>
+                        <h4>Come funziona:</h4>
+                        <p>Prova uno due tre.<br>Prova uno due tre.<br>Prova uno due tre.
+                        </p>
                     </div>
                     <div class="card">
                         <h2>Progetto JavaScript 2</h2>
-                        <a href="https://start2impact-technews.netlify.app/">TechNews</a>
+                        <a href="https://start2impact-technews.netlify.app/" target="_blank" rel="noopener noreferrer" class="link">TechNews</a>
+                        <h4>Come funziona:</h4>
+                        <p>Prova uno due tre.<br>Prova uno due tre.<br>Prova uno due tre.
+                        </p>
                     </div>
                     <div class="card">
                         <h2>Progetto TypeScript</h2>
-                        <a href="https://github.com/jojohve/IncluDO/blob/main/README.md">Trovi il link su questa
-                            pagina</a>
+                        <a href="https://codepen.io/jojohve/pen/MWMaqrg?editors=1111" target="_blank" rel="noopener noreferrer" class="link">Apri demo TypeScript</a>
+                        <h4>Come funziona:</h4>
+                        <p>Prova uno due tre.<br>Prova uno due tre.<br>Prova uno due tre.
+                        </p>
                     </div>
                 </div>
             </section>
@@ -73,8 +104,11 @@
                 <div class="card-wrapper">
                     <div class="card">
                         <h2>Progetto PHP</h2>
-                        <a href="https://github.com/jojohve/Orizon/blob/main/README.md">Scarica l'eseguibile da
+                        <a href="https://github.com/jojohve/Orizon/blob/main/README.md" target="_blank" rel="noopener noreferrer" class="link">Scarica l'eseguibile da
                             questo link</a>
+                            <h4>Come funziona:</h4>
+                            <p>Prova uno due tre.<br>Prova uno due tre.<br>Prova uno due tre.
+                            </p>
                     </div>
                 </div>
             </section>
@@ -84,7 +118,9 @@
                 <div class="card-wrapper">
                     <div class="card">
                         <h2>Progetto WordPress</h2>
-                        <a href="https://depyl-theme.netlify.app/">Depyl Theme</a>
+                        <a href="https://depyl-theme.netlify.app/" target="_blank" rel="noopener noreferrer" class="link">Depyl Theme</a>
+                        <p>Prova uno due tre.<br>Prova uno due tre.<br>Prova uno due tre.
+                        </p>
                     </div>
                 </div>
 
@@ -95,13 +131,19 @@
                 <div class="card-wrapper">
                     <div class="card">
                         <h2>Progetto Java 1</h2>
-                        <a href="https://github.com/jojohve/MeditActive-Java/blob/dev/README.md">Scarica l'eseguibile da
+                        <a href="https://github.com/jojohve/MeditActive-Java/blob/dev/README.md" target="_blank" rel="noopener noreferrer" class="link">Scarica l'eseguibile da
                             questo link</a>
+                            <h4>Come funziona:</h4>
+                            <p>Prova uno due tre.<br>Prova uno due tre.<br>Prova uno due tre.
+                            </p>
                     </div>
                     <div class="card">
                         <h2>Progetto Java per Master <br> in Back-End Developer</h2>
-                        <a href="https://github.com/jojohve/Master/blob/dev/README.md">Scarica l'eseguibile da
+                        <a href="https://github.com/jojohve/Master/blob/dev/README.md" target="_blank" rel="noopener noreferrer" class="link">Scarica l'eseguibile da
                             questo link</a>
+                            <h4>Come funziona:</h4>
+                            <p>Prova uno due tre.<br>Prova uno due tre.<br>Prova uno due tre.
+                            </p>
                     </div>
                 </div>
             </section>
@@ -111,8 +153,11 @@
                 <div class="card-wrapper">
                     <div class="card">
                         <h2>Progetto Node.js</h2>
-                        <a href="https://github.com/jojohve/MeditActive/blob/main/README.md">Scarica l'eseguibile da
+                        <a href="https://github.com/jojohve/MeditActive/blob/main/README.md" target="_blank" rel="noopener noreferrer" class="link">Scarica l'eseguibile da
                             questo link</a>
+                            <h4>Come funziona:</h4>
+                            <p>Prova uno due tre.<br>Prova uno due tre.<br>Prova uno due tre.
+                            </p>    
                     </div>
                 </div>
             </section>

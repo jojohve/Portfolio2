@@ -247,10 +247,10 @@ main {
 }
 
 .card {
-  cursor: pointer;
   margin-top: 20px;
   margin-right: 20px;
   text-align: center;
+  justify-content: center;
   background-color: rgba(255, 255, 255, 0.705);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -300,6 +300,29 @@ main {
   color: transparent;
   text-transform: uppercase;
   letter-spacing: 5px;
+}
+
+.link {
+  cursor: pointer;
+}
+
+.link:hover {
+  padding: 10px;
+  border-radius: 2%;
+  background-color: orangered;
+  color: white;
+  transition: 0.2s;
+}
+
+h4 {
+  font-size: large;
+}
+
+p {
+  font-size: 95%;
+  cursor: text;
+  padding-bottom: 10px;
+  line-height: 125%;
 }
 
 .email-link {
