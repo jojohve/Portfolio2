@@ -147,7 +147,7 @@
                         </div>
                     </div>
 
-                    <div class="card rgb" id="card-gold"> 
+                    <div class="card rgb" id="card-gold">
                         <div class="card-text">
                             <h2>Progetto Java</h2>
                             <h3>per Master in Back-End Developer</h3>
@@ -179,12 +179,58 @@
 
     <script type="text/javascript" src="vanilla-tilt.js"></script>
     <script>
-        VanillaTilt.init(document.querySelectorAll(".card"), {
-            max: 25,
-            speed: 400,
-            scale: 1.1,
-            glare: true,
-            "max-glare": 0.5
+        document.addEventListener("DOMContentLoaded", () => {
+            VanillaTilt.init(document.querySelectorAll(".card"), {
+                max: 25,
+                speed: 400,
+                scale: 1.1,
+                glare: true,
+                "max-glare": 0.5,
+            });
+
+            // Ottimizzazione per dispositivi mobili
+            document.querySelectorAll(".card").forEach((card) => {
+                let lastTiltX = 0;
+                let lastTiltY = 0;
+                let lastTiltZ = 0;
+
+                const smoothMovement = (current, target, factor = 0.1) => {
+                    return current + (target - current) * factor;
+                };
+
+                card.addEventListener("touchmove", (event) => {
+                    const touch = event.touches[0];
+                    const rect = card.getBoundingClientRect();
+
+                    // Calcolo delle inclinazioni X e Y
+                    const tiltXTarget = ((touch.clientY - rect.top) / rect.height - 0.5) * 25;
+                    const tiltYTarget = ((touch.clientX - rect.left) / rect.width - 0.5) * -25;
+
+                    // Rotazione Z calcolata dalla distanza dal centro
+                    const centerX = rect.left + rect.width / 2;
+                    const centerY = rect.top + rect.height / 2;
+                    const deltaX = touch.clientX - centerX;
+                    const deltaY = touch.clientY - centerY;
+                    const distance = Math.sqrt(deltaX ** 2 + deltaY ** 2);
+                    const tiltZTarget = (distance / Math.max(rect.width, rect.height)) * 15 - 7.5;
+
+                    // Applicazione del movimento regolare
+                    lastTiltX = smoothMovement(lastTiltX, tiltXTarget);
+                    lastTiltY = smoothMovement(lastTiltY, tiltYTarget);
+                    lastTiltZ = smoothMovement(lastTiltZ, tiltZTarget);
+
+                    card.style.transform = `rotateX(${lastTiltX.toFixed(2)}deg) rotateY(${lastTiltY.toFixed(2)}deg) rotateZ(${lastTiltZ.toFixed(2)}deg) scale(1.1)`;
+                });
+
+                card.addEventListener("touchend", () => {
+                    // Ripristino con transizione fluida
+                    card.style.transition = "transform 0.5s ease-out";
+                    card.style.transform = "rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1.0)";
+                    setTimeout(() => {
+                        card.style.transition = ""; // Rimuove la transizione dopo il reset
+                    }, 500);
+                });
+            });
         });
     </script>
 </body>
