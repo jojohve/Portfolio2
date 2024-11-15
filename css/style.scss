@@ -250,6 +250,7 @@ video {
   display: flex;
   padding: 20px;
   margin-top: 20px;
+  gap: 50px;
 }
 
 .panel {
@@ -271,38 +272,91 @@ video {
 .card {
   margin-top: 20px;
   margin-right: 20px;
+  height: 300px;
+  width: 250px;
   text-align: center;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.705);
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+    url(../assets/images/StockCake-Upward\ Arrow\ Pattern_1731684825.jpg) no-repeat;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   transition: transform 0.2s;
   z-index: 1;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  cursor: grab;
+}
+
+.rgb::after {
+  content: "";
+  background: linear-gradient(45deg,
+      #ff0000 0%,
+      #ff9a00 10%,
+      #d0de21 20%,
+      #4fdc4a 30%,
+      #3fdad8 40%,
+      #2fc0e2 50%,
+      #1c7fee 60%,
+      #5f15f2 70%,
+      #ba0cf8 80%,
+      #fb07d9 90%,
+      #ff0000 100%) repeat 0% 0% / 300% 100%;
+  position: absolute;
+  inset: -3px;
+  border-radius: 16px;
+  filter: blur(8px);
+  z-index: -1;
+  /* Assicurati che si trovi dietro il contenuto della card */
+  transform: translateZ(-1px);
+  animation: rgb 6s linear infinite;
+}
+
+@keyframes rgb {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.card-text {
+  grid-area: text;
+  transform: translateZ(30px);
+  text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 #card-gold {
-  background: url(/assets/images/—Pngtree—golden\ glitter\ png\ background_5692288.png);
+  background: url(../assets/images/—Pngtree—golden\ glitter\ png\ background_5692288.png),
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+    url(../assets/images/StockCake-Upward\ Arrow\ Pattern_1731684825.jpg) no-repeat;
+  ;
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: rgba(255, 255, 255, 0.705);
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateZ(20px)
 }
 
 .card h2 {
-  color: rgb(37, 37, 252);
+  color: rgb(25, 25, 141);
 }
 
 .card h3 {
-  color: rgb(52, 52, 255);
+  color: rgb(25, 25, 205);
   font-size: 100%;
 }
 
 .card a {
-  color: rgb(255, 39, 39);
+  color: rgb(49, 30, 221);
 }
 
 .contact-section {
@@ -344,7 +398,7 @@ video {
 .link:hover {
   padding: 10px;
   border-radius: 2%;
-  background-color: orangered;
+  background-color: rgb(199, 57, 163);
   color: white;
   transition: 0.2s;
 }
@@ -514,8 +568,6 @@ h4 {
   }
 
   .card {
-    width: 100%;
-    max-width: 400px;
     margin: 10px 0;
     text-align: center;
     justify-content: center;
