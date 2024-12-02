@@ -315,6 +315,18 @@ video {
   grid-area: text;
   transform: translateZ(30px);
   text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+}
+
+.card .card-text h2,
+.card a,
+.card p,
+.card h4,
+.card iframe {
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+  border-radius: 15px;
+  padding: 2px;
+  perspective: 100px;
 }
 
 #card-gold {
@@ -386,11 +398,13 @@ video {
 
 h4 {
   font-size: large;
+  color: rgb(34, 34, 34);
 }
 
 .card p {
   width: 250px;
   font-size: 95%;
+  color: rgb(27, 27, 27);
   cursor: text;
   padding-bottom: 10px;
   line-height: 125%;
