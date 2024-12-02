@@ -246,6 +246,10 @@ video {
   z-index: -3;
 }
 
+source {
+  pointer-events: none; 
+}
+
 .card-wrapper {
   display: flex;
   padding: 20px;
@@ -335,7 +339,6 @@ video {
 }
 
 .card {
-
   .card-text h2,
   a,
   p,
@@ -355,6 +358,7 @@ video {
   ;
   background-size: cover;
   background-repeat: no-repeat;
+  z-index: 1;
 }
 
 .card:hover {

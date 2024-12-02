@@ -246,6 +246,10 @@ video {
   z-index: -3;
 }
 
+source {
+  pointer-events: none;
+}
+
 .card-wrapper {
   display: flex;
   padding: 20px;
@@ -333,6 +337,7 @@ video {
   background: url(../assets/images/—Pngtree—golden\ glitter\ png\ background_5692288.png), linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../assets/images/StockCake-Upward\ Arrow\ Pattern_1731684825.jpg) no-repeat;
   background-size: cover;
   background-repeat: no-repeat;
+  z-index: 1;
 }
 
 .card:hover {
