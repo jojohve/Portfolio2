@@ -116,20 +116,20 @@ a {
   top: -5px;
 }
 
-.header .menu-btn:checked~.menu {
+.header .menu-btn:checked ~ .menu {
   max-height: 240px;
 }
 
-.header .menu-btn:checked~.menu-icon .nav-icon {
+.header .menu-btn:checked ~ .menu-icon .nav-icon {
   background: transparent;
 }
 
-.header .menu-btn:checked~.menu-icon .nav-icon:before {
+.header .menu-btn:checked ~ .menu-icon .nav-icon:before {
   transform: rotate(-45deg);
   top: 0;
 }
 
-.header .menu-btn:checked~.menu-icon .nav-icon:after {
+.header .menu-btn:checked ~ .menu-icon .nav-icon:after {
   transform: rotate(45deg);
   top: 0;
 }
@@ -195,12 +195,20 @@ main {
 
 .skills-nav::before {
   left: 0;
-  background: linear-gradient(to right, rgba(245, 245, 245, 0.5), rgba(245, 245, 245, 0));
+  background: linear-gradient(
+    to right,
+    rgba(245, 245, 245, 0.5),
+    rgba(245, 245, 245, 0)
+  );
 }
 
 .skills-nav::after {
   right: 0;
-  background: linear-gradient(to left, rgba(245, 245, 245, 0.5), rgba(245, 245, 245, 0));
+  background: linear-gradient(
+    to left,
+    rgba(245, 245, 245, 0.5),
+    rgba(245, 245, 245, 0)
+  );
 }
 
 .skills-nav ul {
@@ -247,7 +255,7 @@ video {
 }
 
 source {
-  pointer-events: none; 
+  pointer-events: none;
 }
 
 .card-wrapper {
@@ -280,9 +288,12 @@ source {
   width: 250px;
   text-align: center;
   justify-content: center;
-  background:
-    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-    url(../assets/images/StockCake-Upward\ Arrow\ Pattern_1731684825.jpg) no-repeat;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url(../assets/images/StockCake-Upward\ Arrow\ Pattern_1731684825.jpg)
+      no-repeat;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -293,9 +304,27 @@ source {
   cursor: grab;
 }
 
+.linkButton {
+  display: flex;
+  border-radius: 15px;
+  margin: 10px 700px;
+  justify-content: center;
+  align-items: center;
+  background-color: #d2c3fc;
+  color: #333333c5;
+  height: 30px;
+  font-family: myfont;
+  font-size: large;
+}
+
+.linkButton:hover {
+  color: white;
+}
+
 .rgb::after {
   content: "";
-  background: linear-gradient(45deg,
+  background: linear-gradient(
+      45deg,
       #ff0000 0%,
       #ff9a00 10%,
       #d0de21 20%,
@@ -306,7 +335,9 @@ source {
       #5f15f2 70%,
       #ba0cf8 80%,
       #fb07d9 90%,
-      #ff0000 100%) repeat 0% 0% / 300% 100%;
+      #ff0000 100%
+    )
+    repeat 0% 0% / 300% 100%;
   position: absolute;
   inset: -3px;
   border-radius: 16px;
@@ -344,7 +375,10 @@ source {
   p,
   h4,
   iframe {
-    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+    background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    );
     border-radius: 15px;
     padding: 2px;
     perspective: 100px;
@@ -354,8 +388,8 @@ source {
 #card-gold {
   background: url(../assets/images/—Pngtree—golden\ glitter\ png\ background_5692288.png),
     linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-    url(../assets/images/StockCake-Upward\ Arrow\ Pattern_1731684825.jpg) no-repeat;
-  ;
+    url(../assets/images/StockCake-Upward\ Arrow\ Pattern_1731684825.jpg)
+      no-repeat;
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 1;
@@ -403,7 +437,8 @@ source {
 
 .title-section h1 {
   box-shadow: 5px 0px rgba(0, 0, 0, 0.76);
-  text-shadow: 4px 4px 0px rgba(188, 70, 235, 0.5), 8px 8px 0px rgba(0, 0, 0, 0.2);
+  text-shadow: 4px 4px 0px rgba(188, 70, 235, 0.5),
+    8px 8px 0px rgba(0, 0, 0, 0.2);
   font-weight: bold;
   color: transparent;
   text-transform: uppercase;
@@ -601,7 +636,7 @@ h4 {
     flex-direction: column;
   }
 
-  .menu-btn:checked+.menu {
+  .menu-btn:checked + .menu {
     display: flex;
   }
 
@@ -681,6 +716,10 @@ h4 {
 
   .preview iframe {
     height: 150px;
+  }
+
+  .linkButton {
+    margin: 0;
   }
 }
 
